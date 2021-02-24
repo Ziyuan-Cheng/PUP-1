@@ -9,7 +9,7 @@ const routing = require('./routers');
 const cors = require('koa2-cors');
 const {connectionStr} = require('./config')
 
-mongoose.connect(connectionStr, { useNewUrlParser: true , useFindAndModify: false, useUnifiedTopology:true}, ()=>console.log('MongoDB连接成功了'));
+mongoose.connect(connectionStr, { useNewUrlParser: true , useFindAndModify: false, useUnifiedTopology:true}, ()=>console.log('MongoDB connected'));
 mongoose.connection.on('error',console.error);
 
 
